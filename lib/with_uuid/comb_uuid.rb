@@ -1,4 +1,4 @@
-module HasUuid
+module WithUuid
   class CombUuid
 
     def initialize( uuid_str )

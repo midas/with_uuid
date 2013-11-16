@@ -1,6 +1,6 @@
 require 'active_record'
 
-module HasUuid
+module WithUuid
   module Extensions
 
     module Migrations

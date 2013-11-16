@@ -1,6 +1,6 @@
 require "active_support/concern"
 
-module HasUuid
+module WithUuid
   module Model
 
 	  extend ActiveSupport::Concern
@@ -17,7 +17,7 @@ module HasUuid
       return unless id.blank?
 
       # Assign generated COMBination GUID to #id
-      write_attribute( :id, HasUuid::CombUuid.uuid.to_s )
+      write_attribute( :id, WithUuid::CombUuid.uuid.to_s )
     end
 
   end

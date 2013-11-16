@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'has_uuid/version'
+require 'with_uuid/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "has_uuid"
-  spec.version       = HasUuid::VERSION
+  spec.name          = "with_uuid"
+  spec.version       = WithUuid::VERSION
   spec.authors       = ["Jason Harrelson"]
   spec.email         = ["cjharrelson@iberon.com"]
   spec.description   = %q{Provides facilities to utilize UUIDs with ActiveRecord, including model and migration extensions.}
   spec.summary       = %q{Provides facilities to utilize UUIDs with ActiveRecord.}
-  spec.homepage      = "https://github.com/midas/has_uuid"
+  spec.homepage      = "https://github.com/midas/with_uuid"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
