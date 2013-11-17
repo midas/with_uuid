@@ -1,6 +1,7 @@
 require 'with_uuid/railtie' if defined?(Rails::Railtie)
 require "with_uuid/version"
 require 'schema_dumper'
+require 'uuidtools'
 
 module WithUuid
 
