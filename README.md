@@ -1,6 +1,7 @@
 # HasUuid
 
-TODO: Write a gem description
+Provides facilities to utilize UUIDs with ActiveRecord, including model and migration extensions.
+
 
 ## Installation
 
@@ -16,14 +17,20 @@ Or install it yourself as:
 
     $ gem install has_uuid
 
+
 ## Usage
 
-TODO: Write usage instructions here
+In a migration:
 
-## Contributing
+    create_table "comments", :id => false, :force => true do |t|
+      t.uuid     "id",      :primary_key => true 
+      t.uuid     "post_id",                       :null => false
+    end
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+In a model:
+
+    class Posts < ActiveRecord::Base
+      include WithUuid::Model
+
+      # ...
+    end
