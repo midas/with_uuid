@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   #spec.add_development_dependency "pg"
   #spec.add_development_dependency "mysql2"
 
-  #spec.add_runtime_dependency "uuidtools"
+  spec.add_runtime_dependency "uuidtools"
   spec.add_runtime_dependency "activerecord", '>= 3.1'
   spec.add_runtime_dependency "activesupport", '>= 3.1'
 end
