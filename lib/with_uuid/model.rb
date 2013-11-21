@@ -9,7 +9,8 @@ module WithUuid
 
       self.primary_key = :id
 
-	    before_validation :set_id
+      before_validation :set_id
+      before_create     :set_id
 
 	  end
 
