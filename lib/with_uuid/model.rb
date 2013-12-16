@@ -14,12 +14,19 @@ module WithUuid
 
 	  end
 
+  protected
+
     def set_id
       return unless id.blank?
 
-      # Assign generated COMBination GUID to #id
-      write_attribute( :id, WithUuid::CombUuid.uuid.to_s )
+      uuid = WithUuid::CombUuid.uuid.to_s
+      before_set_id( uuid )
+      write_attribute( :id, uuid )
+      after_set_id( uuid )
     end
+
+    def before_set_id( uuid ); end
+    def after_set_id( uuid );  end
 
   end
 end
