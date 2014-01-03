@@ -16,10 +16,14 @@ module WithUuid
 
   protected
 
+    def generate_uuid
+      WithUuid::CombUuid.uuid.to_s
+    end
+
     def set_id
       return unless id.blank?
 
-      uuid = WithUuid::CombUuid.uuid.to_s
+      uuid = generate_uuid
       before_set_id( uuid )
       write_attribute( :id, uuid )
       after_set_id( uuid )
