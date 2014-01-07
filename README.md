@@ -1,4 +1,4 @@
-# HasUuid
+# WithUuid
 
 Provides facilities to utilize UUIDs with ActiveRecord, including model and migration extensions.
 
@@ -7,7 +7,7 @@ Provides facilities to utilize UUIDs with ActiveRecord, including model and migr
 
 Add this line to your application's Gemfile:
 
-    gem 'has_uuid'
+    gem 'with_uuid'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install has_uuid
+    $ gem install with_uuid
 
 
 ## Usage
